@@ -23,10 +23,16 @@ $ vagrant ssh production
 
 ## Installation
 
+First, remove vendor folder:
+
+```bash
+rm -rf /vagrant/vendor
+```
+
 Install dependancies : 
 
 ```bash
-$ composer install -n 
+$ composer install --no-scripts --no-custom-installers 
 ```
 
 ## Launch server
