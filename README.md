@@ -29,7 +29,7 @@ First, remove vendor folder:
 rm -rf /vagrant/vendor
 ```
 
-Install dependancies : 
+Install dependencies : 
 
 ```bash
 $ composer install --no-scripts --no-custom-installers 
