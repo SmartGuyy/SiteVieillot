@@ -23,10 +23,10 @@ $ vagrant ssh production
 
 ## Installation
 
-Install dependancies : 
+Install dependencies : 
 
 ```bash
-$ composer install -n 
+$ composer install -n
 ```
 
 ## Launch server
