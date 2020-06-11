@@ -5,6 +5,7 @@
   * PHP 7.1.3 or higher;
   * PDO-SQLite PHP extension enabled;
   * and the [usual Symfony application requirements][1].
+  * Virtualbox version 6.00 and Guest Additions 6.0.0 too
 
 ## Create environnement 
 The local environments for recette and production are created by Vagrant. 
