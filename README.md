@@ -24,12 +24,6 @@ $ vagrant ssh production
 
 ## Installation
 
-First, remove vendor folder:
-
-```bash
-rm -rf /vagrant/vendor
-```
-
 Install dependencies : 
 
 ```bash
