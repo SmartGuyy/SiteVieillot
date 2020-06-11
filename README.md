@@ -33,7 +33,7 @@ rm -rf /vagrant/vendor
 Install dependencies : 
 
 ```bash
-$ composer install --no-scripts --no-custom-installers 
+$ composer install -n
 ```
 
 ## Launch server
