@@ -38,8 +38,15 @@ $ composer install -n
 
 ## Launch server
 
+## Local way
+
 ```bash
 $ php bin/console server:start
+```
+
+## Listen all (to see on host)
+```bash
+$ php bin/console server:start 0.0.0.0:8000
 ```
 
 ## Tests
