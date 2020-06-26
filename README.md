@@ -43,4 +43,9 @@ Execute this command to run tests:
 $ ./bin/phpunit
 ```
 
+## Gitlab
+
+For recette and production environnement, gitlab-runner must be installed and /home/gitlab-runner/.bash_logout must be removed (causing error)
+Then DNS entry for gitlab server must be written in /etc/hosts
+
 [1]: https://symfony.com/doc/current/reference/requirements.html

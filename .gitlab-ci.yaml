@@ -1,0 +1,33 @@
+install_dependencies:
+ stage: .pre
+ script:
+ - cd /vagrant
+ - composer install -n
+ tags:
+ - production
+ 
+tests:
+ stage: test
+ script:
+ - cd /vagrant
+ - ./bin/phpunit -v
+ tags:
+ - production
+ 
+deploy_production:
+ stage: deploy
+ script:
+ - cd /vagrant
+ - php bin/console server:stop
+ - php bin/console server:start 0.0.0.0:8000
+ tags:
+ - production
+ 
+deploy_recette:
+ stage: deploy
+ script:
+ - cd /vagrant
+ - php bin/console server:stop
+ - php bin/console server:start 0.0.0.0:8000
+ tags:
+ - recette
