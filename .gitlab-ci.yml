@@ -1,0 +1,36 @@
+install_and_init:
+ stage: .pre
+ script:
+ - cd /vagrant 
+ - composer install -n
+ - php bin/console server:stop
+ tags:
+ - gitlabserver
+ 
+tests:
+ stage: test
+ script:
+ - cd /vagrant
+ - ./bin/phpunit -v
+ tags:
+ - gitlabserver
+ 
+deploy_production:
+ stage: deploy
+ script:
+ - cd /vagrant
+ - php bin/console server:start 0.0.0.0:8000 > /dev/null 2>&1
+ tags:
+ - production
+ only:
+ - master
+ 
+deploy_recette:
+ stage: deploy
+ script:
+ - cd /vagrant
+ - php bin/console server:start 0.0.0.0:8000 > /dev/null 2>&1
+ tags:
+ - recette
+ except:
+ - master

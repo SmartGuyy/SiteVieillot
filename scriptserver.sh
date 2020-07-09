@@ -17,6 +17,10 @@ systemctl set-default graphical.target
 # install few useful tools
 sudo dnf install firefox git curl wget unzip -y
 
+# installing kernel headers
+sudo dnf install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers -y
+sudo dnf install kernel-devel -y
+
 # to download gitlab runner
 # option "L" for location (this option will make curl redo the request on the new place if it was redirected)
 # option "O" writes output to a local file named like the remote file we get 
@@ -89,4 +93,3 @@ sudo gitlab-ctl reconfigure
 # set keyboard to french
 localectl set-keymap fr
 # reboot to apply few parameters
-reboot now
