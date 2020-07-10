@@ -1,5 +1,5 @@
-install_and_init:
- stage: .pre
+build:
+ stage: build
  script:
  - cd /vagrant 
  - composer install -n
